@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+ {% block head %}
+     <title>Modules</title>
+ {% endblock %}
+
+
+ {% block body %}
+     <h1>All modules</h1>
+     <hr>
+<h2>Create New Blog Module:</h2>
+     <br>
+<form action = '/modules' method = 'POST'>
+      <label for="title">Title:</label>
+      <input class="form-control" type='text' name='title' id='title' placeholder="Enter Title" aria-label="Enter Title">
+      <br>
+      <label for="staff">Staff:</label>
+      <input class="form-control" type='text' name='staff' id='staff' placeholder="Staff name" aria-label="Staff name">
+      <br>
+       <label for="project">Project:</label>
+       <textarea class="form-control" id="project" placeholder="Enter Content" aria-label="Enter Content" rows="3"></textarea>
+      <br>
+      <br>
+      <input type ='submit' value ='Post'>
+</form>
+<hr>
+
+     {% for module in modules %}
+        <h2>{{ module.title }}</h2>
+        <p1>{{ module.staff }}</p1>
+
+         {% if module.project %}
+            <small>Assesment:{{ module.project }} on {{ module.date_posted }}</small>
+         {% else %}
+            <h3>To Do:N/A</h3>
+         {% endif %}
+         <br>
+         <br>
+
+
+         <a class="btn btn-danger" href='/modules/delete/{{module.id}}'>Delete</a>
+         <a class="btn btn-primary" href='/modules/edit/{{module.id}}'>Edit</a>
+         <hr>
+     {% endfor %}
+ {% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+ {% block head %}
+     <title> MSc Big Data Science</title>
+ {% endblock %}
+
+ {% block body %}
+     <h1>Mini Project - ECS781P</h1>
+      <main role="main">
+    <div class="jumbotron">
+      <div class="col-sm-8 mx-auto">
+        <h1>Project Specification</h1>
+              <p>You can decide the application domain for your application. You can either build your application on top of the examples we developed during the labs, or select a different domain for it. The base application to be developed has a base score of 6/10 points, as long as it complies with the following requirements: The application provides a dynamically generated REST API. The API must have a sufficient set of services for the selected application domain. The REST API responses must conform to REST standards (e.g. response codes). The application makes use of an external REST service to complement its functionality. The application uses a cloud database for accessing persistent information. The application code is well documented (in each of the code files, as well as in the README.MD file of the git repository). In addition to that, mini projects can do additional tasks to get up to 10 points by implementing additional features such as the ones discussed here. These might require students to research specific techniques beyond what has been covered in the labs: Up to 2 points: Demonstration of load balancing and scaling of the application (e.g. kubernetes based load balancing, as well as Cassandra ring scaling). In order to get the full 2 extra marks, the student must demonstrate to the examiner the effect in practice of these techniques. Up to 2 points: Implemented cloud security measures. Some examples include: Serving the application over https. Implementing hash-based authentication. Implementing user accounts and access management. Securing the database with role-based policies. Up to 2 points: Any of the app components have a non-trivial purpose (other than showcasing your implementation). Request follow up orchestration using HATEOAS.
+              Complex database implementation including data schema design, or substantial write operations. Application logic complex enough to merit its partition into several (micro)services. Up to 4 points: Anything else that would be relevant to a cloud application (needs to be preapproved by Joseph - contact through email first).</p>
+              <p>SUBMISSION AND ASSESSMENT Submission: You should use a git repository to deploy your code. You can either use a public github url, or have a private repo from QMUL ITS Research github repository. In the submission page you only have to provide a link to the git repository</p>.
+              <p>Assessment: The project will be scored over 10 points, and will be worth 10% of your final mark. You will need to present, and defend your application to a lecturer or demonstrator during a lab session. You must be able to explain what your application is doing, and how. Every project must be defended in order for it to be assessed. Whenever your project is examined, you will receive a grade, and feedback of your progress up to that point. You will be able to schedule up to two revisions of your project, in order to improve and improve your initial grade.</p>
+              <p>ADDITIONAL INFORMATION In order to provide ideas for application domains for the mini project, we encourage students to look at available public REST APIs. Some potentially useful REST APIs for ideas can be found at https://github.com/public-apis/public-api</p>
+        <p></p>
+        <p></p>
+        <p>
+          <a class="btn btn-primary" href="/" role="button">Top &raquo;</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+ {% endblock %}
